@@ -94,7 +94,7 @@ footer > p{
 
 /* makes the news items vertical by not allowing content to float around image*/
 @media (max-width: 768px){
-    .grey-img{
+    .grey-image{
         float: none;
     }
 }
