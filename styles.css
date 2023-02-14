@@ -1,0 +1,96 @@
+body{
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+header{
+    background-color: rgb(7,34,68);
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#header-content{
+    background-color: white;
+    border: 2px solid orangered;
+    font-weight: 900;
+    text-align: center;
+    width: min(40%,300px);
+}
+
+#header-content > h2 {
+    margin: 5px;
+}
+
+#header-content > p {
+    margin-bottom: 0;
+}
+
+#news-selector-section{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    margin: 0 5px;
+}
+
+#news-section-title{
+    text-align: center;
+}
+
+#subscribe-button{
+    color: white;
+    background-color: black;
+}
+
+.news-wrapper-div{
+    display: flex;
+    margin-left: 10px;
+}
+
+.news-thumbnail{
+    height: 200px;
+    width: 200px;
+    margin: 5px 25px 10px 0;
+}
+
+.title-heading{
+    margin-top: 5px;
+    color: rgb(7,34,68);
+}
+
+p ~ button{
+    color: white;
+    background-color: orangered;
+    border : 2px outset white;
+    padding: 5px;
+}
+
+
+footer{
+    margin: 0 auto;
+    padding: 5px 0;
+    background-color: rgb(7,34,68);
+    color: white;
+    text-align: center;
+}
+
+footer > p{
+    margin: 0;
+}
+
+/* changes the alignment of news selector section*/
+@media (max-width: 600px){
+    #news-selector-section{
+        grid-template-columns: 1fr;
+    }
+    #news-section-title{
+        grid-row-start: 1;
+    }
+}
+
+/* makes the news items vertical by changing flex-direction to column*/
+@media (max-width: 768px){
+    .news-wrapper-div{
+        flex-direction: column;
+    }
+}
