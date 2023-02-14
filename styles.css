@@ -42,33 +42,29 @@ header{
     background-color: black;
 }
 
-#news-display{
-    margin-left: 5px;
+.news-wrapper-div{
+    display: flex;
+    margin-left: 10px;
 }
 
-.grey-image{
+.news-thumbnail{
     height: 200px;
     width: 200px;
-    float: left;
     margin: 5px 25px 10px 0;
 }
 
-div + hr{
-    clear: left;
-    margin: 5px 0;
+.title-heading{
+    margin-top: 5px;
+    color: rgb(7,34,68);
 }
 
-.grey-image ~ button{
+p ~ button{
     color: white;
     background-color: orangered;
     border : 2px outset white;
     padding: 5px;
 }
 
-.grey-image + h1 {
-    color: rgb(7,34,68);
-    margin: 0;
-}
 
 footer{
     margin: 0 auto;
@@ -92,10 +88,9 @@ footer > p{
     }
 }
 
-/* makes the news items vertical by not allowing content to float around image*/
+/* makes the news items vertical by changing flex-direction to column*/
 @media (max-width: 768px){
-    .grey-image{
-        float: none;
+    .news-wrapper-div{
+        flex-direction: column;
     }
 }
-
